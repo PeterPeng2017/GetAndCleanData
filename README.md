@@ -1,5 +1,5 @@
 # Getting and Cleaning Data: Project
-#Overview
+# Overview
 
 This repository contains the all the materials required by the project assignment for the course "Get And Clean Data" on coursera.
 
@@ -7,7 +7,7 @@ This repository contains the all the materials required by the project assignmen
 Clone this repo to your local computer. Open the script 'run_analysis.R' in your RStudio and change the working dir to your repo dir line 4. Then run the script 'run_analysis.R'.
 An output file "avgData.txt" containing a tidy data set will be generated in your working dir.
 
-#Script Summary
+# Script Summary
 The script does the following:
 
 * Reads the data file in the folder "UCI_HAR_Dataset".

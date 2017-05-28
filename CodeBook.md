@@ -1,4 +1,4 @@
-#CodeBook
+# CodeBook
 ## Getting and Cleaning Data: course project
 by Peter Peng
 
@@ -18,7 +18,7 @@ The goal of the transformation on the source data is to get a tidy dataset, whic
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-#Variables
+# Variables
 The final tidy data set contains following variables:
 subjectId, activityName, followed by a serial of measurement variables.  
 SubjectId identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  
