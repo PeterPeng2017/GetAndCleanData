@@ -52,8 +52,6 @@ tidyData <- allData %>% gather(measurement, value, -c(subjectId, activityId, act
 
 tidyData <- tidyData %>% group_by(subjectId, activityName, measurement) %>% summarise(avg = mean(value))
 
-tidyData <- tidyData %>% spread(measurement, avg)
-
 write.table(tidyData,"avgData.txt", row.names = FALSE)
     
 

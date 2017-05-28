@@ -20,8 +20,10 @@ The goal of the transformation on the source data is to get a tidy dataset, whic
 
 ## Variables
 The final tidy data set contains following variables:
-subjectId, activityName, followed by a serial of measurement variables.  
+subjectId, activityName, measurement, avg  
+#### subjectId
 SubjectId identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  
+#### activityName
 ActivityName includes following activities performed by a subject wearing a smartphone
 
 * WALKING,
@@ -31,7 +33,8 @@ ActivityName includes following activities performed by a subject wearing a smar
 * STANDING,
 * LAYING
 
-The measurement variables is the combination of signals and calculating variables. 
+#### measurement
+The measurement variable is the combination of signals and calculating variables. 
 
 The following signals are found in the data set:
 
@@ -60,6 +63,9 @@ The set of calculating variables that were estimated from these signals are:
 * mean(): Mean value
 * std(): Standard deviation
 
+#### avg
+avg is the average value of each measurement for each subject and each activity
+
 
 ## Code explanation
 This section explains the script code which does the transformation. The 2 powerful library "dplyr" and "tidyr" have been heavily used to complete the tasks.
@@ -75,4 +81,3 @@ set has a readable activity name.
 * Line 49: we adjust the order of the columns, putting the column "activityName" to the second position. 
 * Line 51: by using tidyr, we gather all measurement variables to a single variable "measurement".
 * Line 53: we calculate the avg for each measurement variable.
-* Line 55: we spread each measurement variable to its own column.
