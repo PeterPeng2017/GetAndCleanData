@@ -2,15 +2,15 @@
 ## Getting and Cleaning Data: course project
 by Peter Peng
 
-# Description
+## Description
 
 This doc describes the data and how the transformation is done on the source data to get a tidy dataset.
 
-# Source data
+## Source data
 The source data are collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-# Goal
+## Goal
 The goal of the transformation on the source data is to get a tidy dataset, which satisfies the following criteria:
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -18,7 +18,7 @@ The goal of the transformation on the source data is to get a tidy dataset, whic
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Variables
+## Variables
 The final tidy data set contains following variables:
 subjectId, activityName, followed by a serial of measurement variables.  
 SubjectId identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  
@@ -61,7 +61,7 @@ The set of calculating variables that were estimated from these signals are:
 * std(): Standard deviation
 
 
-# Code explanation
+## Code explanation
 This section explains the script code which does the transformation:
 * Line 8: read the file "features.txt". This file contains all the column names for data set later we will work on.
 * Line 10: we defined a function ,which is used to read the 2 data set files for train and test. This function also reads
