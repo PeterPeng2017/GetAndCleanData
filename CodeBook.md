@@ -62,14 +62,17 @@ The set of calculating variables that were estimated from these signals are:
 
 
 ## Code explanation
-This section explains the script code which does the transformation:
-* Line 8: read the file "features.txt". This file contains all the column names for data set later we will work on.
+This section explains the script code which does the transformation. The 2 powerful library "dplyr" and "tidyr" have been heavily used to complete the tasks.
+* Line 4: set the working dir. It should be your repo dir if you clone this repo to your local machine. 
+The working dir contains source data folder named "UCI_HAR_Dataset", from which the script will read data.
+* Line 8: read the file "features.txt". This file contains all the column names for the data set later we will work on.
 * Line 10: we defined a function ,which is used to read the 2 data set files for train and test. This function also reads
 the file for all the subjects and activities for the data set. After 3 files are read, we then join those 3 files to
-get complete data set, which has readable column names for all variables and activity id for each row.
+get a complete data set, which has readable column names for all variables and activity id for each row.
 * Line 42: we combined 2 data sets for train and test to 1 complete data set.
 * Line 44 to 47: we read the file for activity labels and join it to the complete data set, thus each row in the complete data
 set has a readable activity name.
+* Line 49: we adjust the order of the columns, putting the column "activityName" to the second position. 
 * Line 51: by using tidyr, we gather all measurement variables to a single variable "measurement".
 * Line 53: we calculate the avg for each measurement variable.
 * Line 55: we spread each measurement variable to its own column.
