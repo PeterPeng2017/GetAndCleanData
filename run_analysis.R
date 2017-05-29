@@ -19,8 +19,8 @@ readMeasurementFromFile <- function(dataFilePath, subjectFilePath, activityFileP
     measurementData <- measurementData[, !duplicated(colnames(measurementData))]
     
     
-    stdCols <- grep("std\\(\\)", colnames(measurementData))
-    meanCols <- grep("mean\\(\\)", colnames(measurementData))
+    stdCols <- grep("std.*\\(\\)", colnames(measurementData))
+    meanCols <- grep("mean.*\\(\\)", colnames(measurementData))
     targetCols <- c(stdCols, meanCols)
     
     measurementData <- measurementData %>% select(targetCols)
