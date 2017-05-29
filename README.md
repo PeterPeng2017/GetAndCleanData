@@ -17,6 +17,8 @@ The script does the following:
 * Appropriately labels the data set with descriptive variable names. 
 * From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+_**Attention**_: **please install packages "dplyr" and "tidyr" before running the script.**  
+
 More detailed explanation on the script can ben found in the file [CodeBook.md](https://github.com/PeterPeng2017/GetAndCleanData/blob/master/CodeBook.md)
 
 # About source data
